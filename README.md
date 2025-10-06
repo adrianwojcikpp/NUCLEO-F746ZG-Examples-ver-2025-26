@@ -4,10 +4,16 @@ Przykładowe aplikacje wbudowane dla zestawu uruchomieniowego NUCLEO z mikrokont
 
 Projekt stworzony za pomocą środowiska STM32CubeIDE w wersji **1.19.0** oraz firmware STM32CubeF7 w wersji **1.17.4**.
 
+Zadania laboratoryjne
+- L00: Wprowadzenie do IDE
+  - [Zadanie #1: Szablon projektu](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/462886fada69df4fbc8d2661fbe2b203d966a958/L00_Example)
 
 # Examples of embedded applications for NUCLEO-F746ZG board
 
 Examples of embedded applications for the NUCLEO development kit with the STM32F746ZG microcontroller based on *Microprocessor systems* laboratory classes on Automatic Control and Robotics at the Poznań University of Technology.
 
 Project created using the STM32CubeIDE environment, version **1.19.0** and STM32CubeF7 firmware package, version **1.17.4**.
+
+- L00: Introduction to IDE
+  - [Task #1: Project template](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/462886fada69df4fbc8d2661fbe2b203d966a958/L00_Example)
 
