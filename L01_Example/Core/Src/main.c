@@ -101,8 +101,11 @@ int main(void)
   {
    // Write to LED pins
    HAL_GPIO_WritePin(LD1_GPIO_Port, LD1_Pin, LD_Indx == 0);
+   LD1_State = HAL_GPIO_ReadPin(LD1_GPIO_Port, LD1_Pin);
    HAL_GPIO_WritePin(LD2_GPIO_Port, LD2_Pin, LD_Indx == 1);
+   LD2_State = HAL_GPIO_ReadPin(LD2_GPIO_Port, LD2_Pin);
    HAL_GPIO_WritePin(LD3_GPIO_Port, LD3_Pin, LD_Indx == 2);
+   LD3_State = HAL_GPIO_ReadPin(LD3_GPIO_Port, LD3_Pin);
 
    // Increment LED index modulo 3
    LD_Indx =  (LD_Indx+1) % 3;
