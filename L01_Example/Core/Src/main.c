@@ -101,9 +101,9 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    // Read USER button
+    // Read PULL UP button
     PULL_UP_Btn_State = HAL_GPIO_ReadPin(PULL_UP_Btn_GPIO_Port, PULL_UP_Btn_Pin);
-    // Check for rising edge
+    // Check for falling edge
     if(PULL_UP_Btn_State == 0 && PULL_UP_Btn_StatePrev == 1)
       PULL_UP_Btn_EdgeDetected = 1;
     // Remember state
