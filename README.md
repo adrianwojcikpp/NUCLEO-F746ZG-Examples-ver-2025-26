@@ -9,11 +9,11 @@ Zadania laboratoryjne
   - [Zadanie #1: Szablon projektu](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/462886fada69df4fbc8d2661fbe2b203d966a958/L00_Example)
   - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/59cae65e72af171dce676ab8bef43f9ab99643d7/L00_Example)
 - L01: GPIO / NVIC
-  - [Zadanie #1]() 
-  - [Zadanie #2]()
-  - [Zadanie #3]()
-  - [Zadanie #4]()
-  - [Zadanie #5]()
+  - [Zadanie #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/c9d180895f43fb4788aa38d7c605e8e43994af62/L01_Example) 
+  - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/7c2437f82ca7018f801367fa5e8a02e482cfb126/L01_Example)
+  - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/ed1a6a03511bba850077f9911eb5dfde0e9a72bb/L01_Example)
+  - [Zadanie #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/7558c776a52715c32ebaca3f75ee18617c2f5032/L01_Example)
+  - [Zadanie #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/781f45127f6daa86b0031cc88c9a062a3f1ffaa4/L01_Example)
 
 # Examples of embedded applications for NUCLEO-F746ZG board
 
@@ -25,8 +25,8 @@ Project created using the STM32CubeIDE environment, version **1.19.0** and STM32
   - [Task #1: Project template](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/462886fada69df4fbc8d2661fbe2b203d966a958/L00_Example)
     [Task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/59cae65e72af171dce676ab8bef43f9ab99643d7/L00_Example)
 - L01: GPIO / NVIC
-  - [Task #1]() 
-  - [Task #2]()
-  - [Task #3]()
-  - [Task #4]()
-  - [Task #5]()
+  - [Task #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/c9d180895f43fb4788aa38d7c605e8e43994af62/L01_Example) 
+  - [Task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/7c2437f82ca7018f801367fa5e8a02e482cfb126/L01_Example)
+  - [Task #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/ed1a6a03511bba850077f9911eb5dfde0e9a72bb/L01_Example)
+  - [Task #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/7558c776a52715c32ebaca3f75ee18617c2f5032/L01_Example)
+  - [Task #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/781f45127f6daa86b0031cc88c9a062a3f1ffaa4/L01_Example)
