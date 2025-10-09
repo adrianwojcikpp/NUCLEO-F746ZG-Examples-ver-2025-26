@@ -7,6 +7,13 @@ Projekt stworzony za pomocą środowiska STM32CubeIDE w wersji **1.19.0** oraz f
 Zadania laboratoryjne
 - L00: Wprowadzenie do IDE
   - [Zadanie #1: Szablon projektu](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/462886fada69df4fbc8d2661fbe2b203d966a958/L00_Example)
+  - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/59cae65e72af171dce676ab8bef43f9ab99643d7/L00_Example)
+- L01: GPIO / NVIC
+  - [Zadanie #1]() 
+  - [Zadanie #2]()
+  - [Zadanie #3]()
+  - [Zadanie #4]()
+  - [Zadanie #5]()
 
 # Examples of embedded applications for NUCLEO-F746ZG board
 
@@ -16,4 +23,10 @@ Project created using the STM32CubeIDE environment, version **1.19.0** and STM32
 
 - L00: Introduction to IDE
   - [Task #1: Project template](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/462886fada69df4fbc8d2661fbe2b203d966a958/L00_Example)
-
+    [Task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/59cae65e72af171dce676ab8bef43f9ab99643d7/L00_Example)
+- L01: GPIO / NVIC
+  - [Task #1]() 
+  - [Task #2]()
+  - [Task #3]()
+  - [Task #4]()
+  - [Task #5]()
