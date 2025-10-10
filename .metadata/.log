@@ -3592,3 +3592,33 @@ java.lang.NullPointerException: Cannot read the array length because "containers
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 15:35:34.393
 !MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 15:41:21.361
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 23:06:26.670
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 23:09:40.335
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 23:13:32.723
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 23:14:33.947
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 23:15:55.182
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 23:21:12.614
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 23:26:30.876
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 23:29:45.512
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.swv 1 1 2025-10-10 23:38:43.160
+!MESSAGE SWV configuration; base: 36000000; minDiv: 18; maxDiv: 65535; maxSWO: 2000000; limit: 2000000 => SWO: 2000000; CPU: 216000000; div: 108
