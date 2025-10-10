@@ -94,11 +94,11 @@ _Bool UART_ParseCmd(const char *cmd, LED_DIO_Handle_TypeDef **hled, LED_DIO_Stat
     if (cmd[0] != 'L' || cmd[1] != 'D')
         return 0;
 
-    // Check that str[2] is '1', '2', or '3'
+    // Check that cmd[2] is '1', '2', or '3'
     if (cmd[2] < '1' || cmd[2] > '3')
         return 0;
 
-    // Check that str[3] is '0' or '1'
+    // Check that cmd[3] is '0' or '1'
     if (cmd[3] != '0' && cmd[3] != '1')
         return 0;
 
