@@ -20,6 +20,11 @@ Zadania laboratoryjne
   - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/87d6c67db8d3376f41d311e3c43df2e891d03757/L02_Example)
   - [Zadanie #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/5ee7e38e7b77890d05c63c02f1c285618658ad01/L02_Example)
   - [Zadanie #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/433fb7a2d0c18e8fc49b7e6dc0d63b060ee085fe/L02_Example)
+- L03: TIM
+  - [Zadanie #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/103fe004566c4d2a4fa76c7cce00b01a7d556f5b/L03_Example)
+  - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/6817f998e98c9edb75be4c5f01b82e7dbe6e0d14/L03_Example)
+  - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/daa4e1f60f07474d721dcd13dc4f142bc7b6a511/L03_Example)
+  - [Zadanie #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a46a16b21d17ebf6ef9f2370ef28092a7d8148c2/L03_Example)
 
 # Examples of embedded applications for NUCLEO-F746ZG board
 
@@ -42,3 +47,8 @@ Project created using the STM32CubeIDE environment, version **1.19.0** and STM32
   - [Task #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/87d6c67db8d3376f41d311e3c43df2e891d03757/L02_Example)
   - [Task #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/5ee7e38e7b77890d05c63c02f1c285618658ad01/L02_Example)
   - [Task #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/433fb7a2d0c18e8fc49b7e6dc0d63b060ee085fe/L02_Example)
+- L03: TIM
+  - [Task #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/103fe004566c4d2a4fa76c7cce00b01a7d556f5b/L03_Example)
+  - [Task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/6817f998e98c9edb75be4c5f01b82e7dbe6e0d14/L03_Example)
+  - [Task #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/daa4e1f60f07474d721dcd13dc4f142bc7b6a511/L03_Example)
+  - [Task #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a46a16b21d17ebf6ef9f2370ef28092a7d8148c2/L03_Example)
