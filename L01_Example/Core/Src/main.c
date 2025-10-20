@@ -24,7 +24,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include "stm32f7xx_ll_exti.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -34,7 +34,7 @@
 
 /* Private define ------------------------------------------------------------*/
 /* USER CODE BEGIN PD */
-#define ENC_CLK_EXTI_LINE LL_EXTI_LINE_6
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
@@ -45,12 +45,13 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-_Bool LD4_State;   //< External LED state (0 = off, 1 = on)
-_Bool ENC_DT_State;//< Encoder direction line state
-_Bool ENC_CLK_State;//< Encoder clock line state
-_Bool ENC_CLK_EdgeDetected;
-
-int ENC_Counter = 0;
+_Bool LD4_State, LD5_State, LD6_State;   //< External LED states (0 = off, 1 = on)
+_Bool PULL_UP_Btn_State, PULL_UP_Btn_StatePrev = 1; //< External pull-up button
+                                                    // state (current and previous)
+_Bool PULL_DOWN_Btn_State, PULL_DOWN_Btn_StatePrev = 0; //< External pull-down button
+                                                    // state (current and previous)
+_Bool PULL_UP_Btn_EdgeDetected = 0;
+_Bool PULL_DOWN_Btn_EdgeDetected = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -61,42 +62,7 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-/**
-  * @brief  EXTI line detection callbacks.
-  * @param  GPIO_Pin Specifies the pins connected EXTI line
-  * @retval None
-  */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-  if(GPIO_Pin == ENC_CLK_Pin)
-  {
-    // Temporarily disable EXTI line
-    LL_EXTI_DisableIT_0_31(ENC_CLK_EXTI_LINE);
 
-    // Busy wait to filter short pulses
-    for(long int i = 0; i < 10000L; i++)
-      __asm__("nop"); // WARNING: delay in interrupt is NOT recommended practice
-
-    ENC_CLK_EdgeDetected = 0;
-
-    // Check if clock line is still High
-    ENC_CLK_State = HAL_GPIO_ReadPin(ENC_CLK_GPIO_Port, ENC_CLK_Pin);
-    if(ENC_CLK_State)
-    {
-      // Read direction line
-      ENC_DT_State = HAL_GPIO_ReadPin(ENC_DT_GPIO_Port, ENC_DT_Pin);
-
-      // Update counter - increment if direction line is High, decrement otherwise
-      if(ENC_DT_State)
-        ENC_Counter = (ENC_Counter + 100 + 1000) % 1000;
-      else
-        ENC_Counter = (ENC_Counter - 100 + 1000) % 1000;
-    }
-
-    // Enable EXTI line
-    LL_EXTI_EnableIT_0_31(ENC_CLK_EXTI_LINE);
-  }
-}
 /* USER CODE END 0 */
 
 /**
@@ -138,12 +104,46 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-   // Toggle LED
-   HAL_GPIO_TogglePin(LD4_GPIO_Port, LD4_Pin);
-   LD4_State = HAL_GPIO_ReadPin(LD4_GPIO_Port, LD4_Pin);
+    // Read PULL UP button
+    PULL_UP_Btn_State = HAL_GPIO_ReadPin(PULL_UP_Btn_GPIO_Port, PULL_UP_Btn_Pin);
+    // Check for falling edge
+    if(PULL_UP_Btn_State == 0 && PULL_UP_Btn_StatePrev == 1)
+      PULL_UP_Btn_EdgeDetected = 1;
+    // Remember state
+    PULL_UP_Btn_StatePrev = PULL_UP_Btn_State;
 
-   // Wait for given period (100 to 1000 ms)
-   HAL_Delay(100 + ENC_Counter - 1);
+    // Read PULL DOWN button
+    PULL_DOWN_Btn_State = HAL_GPIO_ReadPin(PULL_DOWN_Btn_GPIO_Port, PULL_DOWN_Btn_Pin);
+    // Check for rising edge
+    if(PULL_DOWN_Btn_State == 1 && PULL_DOWN_Btn_StatePrev == 0)
+      PULL_DOWN_Btn_EdgeDetected = 1;
+    // Remember state
+    PULL_DOWN_Btn_StatePrev = PULL_DOWN_Btn_State;
+
+   // If edge detected - perform action (LED on or off)
+   if(PULL_UP_Btn_EdgeDetected)
+   {
+     PULL_UP_Btn_EdgeDetected = 0;
+     HAL_GPIO_WritePin(LD4_GPIO_Port, LD4_Pin, GPIO_PIN_SET);
+     LD4_State = HAL_GPIO_ReadPin(LD4_GPIO_Port, LD4_Pin);
+     HAL_GPIO_WritePin(LD5_GPIO_Port, LD5_Pin, GPIO_PIN_SET);
+     LD5_State = HAL_GPIO_ReadPin(LD5_GPIO_Port, LD5_Pin);
+     HAL_GPIO_WritePin(LD6_GPIO_Port, LD6_Pin, GPIO_PIN_SET);
+     LD6_State = HAL_GPIO_ReadPin(LD6_GPIO_Port, LD6_Pin);
+   }
+   if(PULL_DOWN_Btn_EdgeDetected)
+   {
+     PULL_DOWN_Btn_EdgeDetected = 0;
+     HAL_GPIO_WritePin(LD4_GPIO_Port, LD4_Pin, GPIO_PIN_RESET);
+     LD4_State = HAL_GPIO_ReadPin(LD4_GPIO_Port, LD4_Pin);
+     HAL_GPIO_WritePin(LD5_GPIO_Port, LD5_Pin, GPIO_PIN_RESET);
+     LD5_State = HAL_GPIO_ReadPin(LD5_GPIO_Port, LD5_Pin);
+     HAL_GPIO_WritePin(LD6_GPIO_Port, LD6_Pin, GPIO_PIN_RESET);
+     LD6_State = HAL_GPIO_ReadPin(LD6_GPIO_Port, LD6_Pin);
+   }
+
+   // Wait for 10 milliseconds
+   HAL_Delay(9);
 
     /* USER CODE END WHILE */
 

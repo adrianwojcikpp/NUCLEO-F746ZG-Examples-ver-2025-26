@@ -25,10 +25,7 @@
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
 #include <stdio.h>
-#include <string.h>
-#include <stdlib.h>
-#include "led_dio_config.h"
-#include "jsmn.h"
+#include "btn_dio_config.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -49,7 +46,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+unsigned int USER_Btn_Counter = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -59,142 +56,7 @@ void SystemClock_Config(void);
 /* USER CODE END PFP */
 
 /* Private user code ---------------------------------------------------------*/
-
 /* USER CODE BEGIN 0 */
-/**
- * @brief  Low-level implementation of the _write system call.
- *
- * This function redirects standard output (e.g., printf) to UART3.
- * It transmits data from the provided buffer over the UART interface.
- *
- * @param[in]  file File descriptor (ignored in this implementation).
- * @param[in]  ptr  Pointer to the data buffer to be transmitted.
- * @param[in]  len  Number of bytes to transmit.
- *
- * @retval Number of bytes transmitted on success.
- * @retval -1 on transmission error.
- *
- * @note This function is typically used when retargeting printf() to UART.
- *       It blocks until all bytes are sent (uses HAL_MAX_DELAY).
- */
-int _write(int file, char *ptr, int len)
-{
-  return (HAL_UART_Transmit(&huart3, (uint8_t*)ptr, len, HAL_MAX_DELAY) == HAL_OK) ? len : -1;
-}
-
-/**
- * @brief  Low-level implementation of the _read system call.
- *
- * This function redirects standard input (e.g., scanf) to UART3.
- * It receives data into the provided buffer from the UART interface.
- *
- * @param[in]  file File descriptor (ignored in this implementation).
- * @param[out] ptr  Pointer to the data buffer where received bytes will be stored.
- * @param[in]  len  Maximum number of bytes to read.
- *
- * @retval Number of bytes received on success.
- * @retval -1 on reception error.
- *
- * @note This function blocks until the specified number of bytes is received.
- *       It is typically used when retargeting scanf() to UART.
- */
-int _read(int file, char *ptr, int len)
-{
-  return (HAL_UART_Receive(&huart3, (uint8_t*)ptr, len, HAL_MAX_DELAY) == HAL_OK) ? len : -1;
-}
-
-/**
- * @brief Read and validate command in the format "LDxy"
- *
- * @param[in] str    : Input C-string (must be null-terminated)
- * @param[out] led   : Double pointer to LED_DIO_Handle_TypeDef
- * @param[out] state : Pointer to LED_DIO_State_TypeDef
- * @return true if valid format and values, false otherwise
- */
-_Bool UART_ParseCmd(const char *json, LED_DIO_Handle_TypeDef **hled, LED_DIO_State_TypeDef *state)
-{
-  if(!json)
-    return 0;
-
-  jsmn_parser parser;
-  jsmntok_t tokens[128]; // Adjust size depending on expected input complexity
-  jsmn_init(&parser);
-
-  int token_count = jsmn_parse(&parser, json, strlen(json), tokens, sizeof(tokens)/sizeof(tokens[0]));
-  if(token_count < 1 || tokens[0].type != JSMN_ARRAY)
-    return 0;
-
-  size_t led_index = 0;
-
-  // Iterate over array elements
-  for(int i = 1; i < token_count && led_index < 3; )
-  {
-    if(tokens[i].type != JSMN_OBJECT)
-    {
-      i++;
-      continue;
-    }
-
-    int object_size = tokens[i].size * 2; // Each key-value pair = 2 tokens
-    int end = i + object_size + 1;
-
-    int led_val = -1;
-    _Bool state_val = 0;
-    _Bool led_found = 0, state_found = 0;
-
-    // Process each key-value pair
-    for(int j = i + 1; j < end; j += 2)
-    {
-      jsmntok_t key = tokens[j];
-      jsmntok_t val = tokens[j + 1];
-
-      // Extract key string
-      int key_len = key.end - key.start;
-      const char *key_str = json + key.start;
-
-      if(strncmp(key_str, "id", key_len) == 0 && val.type == JSMN_STRING)
-      {
-        if(strncmp(json + val.start, "LD", 2) == 0)
-        {
-          led_val = atoi(json + val.start + 2);
-          if (led_val >= 1 && led_val <= 3)
-            led_found = 1;
-        }
-      }
-      else if(strncmp(key_str, "state", key_len) == 0 && val.type == JSMN_PRIMITIVE)
-      {
-        if(strncmp(json + val.start, "true", 4) == 0 || atoi(json + val.start) == 1)
-          state_val = 1;
-        else if (strncmp(json + val.start, "false", 5) == 0 || atoi(json + val.start) == 0)
-          state_val = 0;
-        else
-          return 0; // Invalid value
-        state_found = 1;
-      }
-    }
-
-    if(led_found && state_found)
-    {
-      switch(led_val)
-      {
-      case 1:
-        hled[led_index] = &hld1;
-        break;
-      case 2:
-        hled[led_index] = &hld2;
-        break;
-      case 3:
-        hled[led_index] = &hld3;
-        break;
-      default: break;
-      }
-      state[led_index] = state_val;
-      led_index++;
-    }
-    i = end;
-  }
-  return 1;
-}
 
 /* USER CODE END 0 */
 
@@ -206,7 +68,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-  setvbuf(stdin, NULL, _IONBF, 0);
+
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -230,25 +92,24 @@ int main(void)
   MX_I2C1_Init();
   MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-  puts("Hello, Nucleo!");
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    char json_str[128];
-    scanf("%s", json_str);
-    LED_DIO_Handle_TypeDef *hled[3] = { NULL, };
-    LED_DIO_State_TypeDef state[3];
-    if(UART_ParseCmd(json_str, hled, state))
+    if(BTN_DIO_EdgeDetected(&husrbtn) == BTN_PRESSED_EDGE)
     {
-      for(int i = 0; hled[i] != NULL && i < 3; i++)
-      {
-        LED_DIO_Write(hled[i], state[i]);
-        printf("LD%i is %s\n", LED_GET_ID(hled[i]), LED_DIO_Read(hled[i]) ? "On" : "Off" );
-      }
+      USER_Btn_Counter++;
+      static char UART_Message[64];
+      unsigned int UART_MessageLen = snprintf(UART_Message, sizeof(UART_Message), "Hello %u\n\r", USER_Btn_Counter);
+      unsigned int UART_MessageTimeout = 1 + (1000*10*UART_MessageLen / huart3.Init.BaudRate);
+      HAL_UART_Transmit(&huart3, (uint8_t*)UART_Message, UART_MessageLen, UART_MessageTimeout);
     }
+
+    HAL_Delay(99);
+
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
