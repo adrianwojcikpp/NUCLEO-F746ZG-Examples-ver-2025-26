@@ -27,7 +27,7 @@
 LAMP_HandleTypeDef hlamp1 = {
   .DelayTimer = &htim2, .TriacTimer = &htim7,
   .SYNC_Port  = LAMP_SYNC_GPIO_Port,  .SYNC_Pin  = LAMP_SYNC_Pin,
-  .TRIAC_Port = LAMP_TRIAC_GPIO_Port, .TRIAC_Pin = LAMP_TRIAC_Pin, 
+  .TRIAC_Port = LAMP_TRIAC_GPIO_Port, .TRIAC_Pin = LAMP_TRIAC_Pin,
   .EXTI_IRQn = EXTI9_5_IRQn,
   .TriacFiringAngle = 90.0,
   .TriacFiringAngleMin = 10.0, .TriacFiringAngleMax = 160.0

@@ -66,6 +66,8 @@ void Error_Handler(void);
 #define LAMP_SYNC_EXTI_IRQn EXTI9_5_IRQn
 #define MCO_Pin GPIO_PIN_0
 #define MCO_GPIO_Port GPIOH
+#define DEBUG_OUT2_Pin GPIO_PIN_0
+#define DEBUG_OUT2_GPIO_Port GPIOC
 #define RMII_MDC_Pin GPIO_PIN_1
 #define RMII_MDC_GPIO_Port GPIOC
 #define RMII_REF_CLK_Pin GPIO_PIN_1

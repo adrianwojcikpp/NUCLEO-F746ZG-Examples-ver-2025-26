@@ -71,6 +71,9 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(LAMP_TRIAC_GPIO_Port, LAMP_TRIAC_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(DEBUG_OUT2_GPIO_Port, DEBUG_OUT2_Pin, GPIO_PIN_RESET);
+
+  /*Configure GPIO pin Output Level */
   HAL_GPIO_WritePin(DEBUG_OUT1_GPIO_Port, DEBUG_OUT1_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
@@ -97,6 +100,13 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Mode = GPIO_MODE_IT_RISING;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   HAL_GPIO_Init(LAMP_SYNC_GPIO_Port, &GPIO_InitStruct);
+
+  /*Configure GPIO pin : DEBUG_OUT2_Pin */
+  GPIO_InitStruct.Pin = DEBUG_OUT2_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_NOPULL;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(DEBUG_OUT2_GPIO_Port, &GPIO_InitStruct);
 
   /*Configure GPIO pins : RMII_MDC_Pin RMII_RXD0_Pin RMII_RXD1_Pin */
   GPIO_InitStruct.Pin = RMII_MDC_Pin|RMII_RXD0_Pin|RMII_RXD1_Pin;
