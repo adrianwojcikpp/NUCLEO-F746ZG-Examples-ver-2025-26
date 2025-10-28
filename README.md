@@ -32,7 +32,7 @@ Zadania laboratoryjne
   - [Zadanie #4 (ver. 1)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2a87fc6b0c39e9a4b8c1d041768dc042e3e0a47b/L04_Example) / [(ver. 2)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/6e2b315da45fda13fcd9072a154afa6ec132074d/L04_Example)
   - [Zadanie #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/d920c00c17aafb8fed6e2d4771fc95d4cb37457b/L04_Example)
   - [Zadanie #6](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/7a9c61416297dd3e01272ab937f6ce928ddda449/L04_Example)
-  - 
+    
 # Examples of embedded applications for NUCLEO-F746ZG board
 
 Examples of embedded applications for the NUCLEO development kit with the STM32F746ZG microcontroller based on *Microprocessor systems* laboratory classes on Automatic Control and Robotics at the Poznań University of Technology.
