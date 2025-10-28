@@ -104,7 +104,7 @@ int main(void)
   {
     static char UART_Message[64];
     unsigned int UART_MessageLen = snprintf(UART_Message, sizeof(UART_Message), "{\"encoder\":%3lu}\r", ENC_ReadCounter(&henc1));
-    unsigned int UART_MessageTimeout = 1 + (UART_MessageLen / huart3.Init.BaudRate);
+    unsigned int UART_MessageTimeout = 1 + (10000*UART_MessageLen / huart3.Init.BaudRate);
     HAL_UART_Transmit(&huart3, (uint8_t*)UART_Message, UART_MessageLen, UART_MessageTimeout);
     HAL_Delay(99);
     /* USER CODE END WHILE */
