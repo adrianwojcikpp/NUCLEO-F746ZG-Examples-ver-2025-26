@@ -25,8 +25,8 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
-#include "lamp_config.h"
+#include <stdlib.h>
+#include <string.h>
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,9 +47,11 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-char msg[] = "F000";
-const unsigned int LAMP_MSG_LEN = (sizeof(msg)-1);
-_Bool UART_RxComplete;
+_Bool DEBUG_OUT1_State, DEBUG_OUT2_State;
+_Bool DEBUG_Flag1, DEBUG_Flag2;
+unsigned int TIM_Period_us;
+char UART_Cmd[] = "0000";
+unsigned int UART_CmdLen;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -61,35 +63,45 @@ void SystemClock_Config(void);
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
 /**
-  * @brief  EXTI line detection callbacks.
-  * @param  GPIO_Pin Specifies the pins connected EXTI line
-  * @retval None
-  */
-void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
-{
-  /* Dimmer (LAMP) handling */
-  if(GPIO_Pin == hlamp1.SYNC_Pin)
-  {
-    LAMP_StartDelayTimer(&hlamp1);
-  }
-}
-
-/**
   * @brief  Period elapsed callback in non-blocking mode
   * @param  htim TIM handle
   * @retval None
   */
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
-  /* Dimmer (LAMP) handling */
-  if(htim->Instance == hlamp1.DelayTimer->Instance)
+  if(htim == &htim2)
   {
-    LAMP_StopDelayTimer(&hlamp1);
-    LAMP_StartTriacFiring(&hlamp1);
+    // Stop delay timer
+    HAL_TIM_Base_Stop_IT(&htim2);
+
+    // Clear global variable #1
+    DEBUG_Flag1 = 0;
+
+    // Clear and read digital output #1
+    HAL_GPIO_WritePin(DEBUG_OUT1_GPIO_Port, DEBUG_OUT1_Pin, GPIO_PIN_RESET);
+    DEBUG_OUT1_State = HAL_GPIO_ReadPin(DEBUG_OUT1_GPIO_Port, DEBUG_OUT1_Pin);
+
+    // Set global variable #2
+    DEBUG_Flag2 = 1;
+
+    // Set and read digital output #2
+    HAL_GPIO_WritePin(DEBUG_OUT2_GPIO_Port, DEBUG_OUT2_Pin, GPIO_PIN_SET);
+    DEBUG_OUT2_State = HAL_GPIO_ReadPin(DEBUG_OUT2_GPIO_Port, DEBUG_OUT2_Pin);
+
+    // Start pulse timer
+    HAL_TIM_Base_Start_IT(&htim7);
   }
-  if(htim->Instance == hlamp1.TriacTimer->Instance)
+  else if(htim == &htim7)
   {
-    LAMP_StopTriacFiring(&hlamp1);
+    // Stop pulse timer
+    HAL_TIM_Base_Stop_IT(&htim7);
+
+    // Clear global variable #2
+    DEBUG_Flag2 = 0;
+
+    // Clear and read digital output #2
+    HAL_GPIO_WritePin(DEBUG_OUT2_GPIO_Port, DEBUG_OUT2_Pin, GPIO_PIN_RESET);
+    DEBUG_OUT2_State = HAL_GPIO_ReadPin(DEBUG_OUT2_GPIO_Port, DEBUG_OUT2_Pin);
   }
 }
 
@@ -100,12 +112,39 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   */
 void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
 {
-  /* Dimmer (LAMP) handling */
   if(huart == &huart3)
   {
-    UART_RxComplete = 1;
+    unsigned long int TIM_Period_us_tmp = strtol(UART_Cmd, NULL, 10);
+    if(TIM_Period_us_tmp >= 100 && TIM_Period_us_tmp <= 100000)
+      TIM_Period_us = TIM_Period_us_tmp;
+    HAL_UART_Receive_IT(&huart3, (uint8_t*)UART_Cmd, UART_CmdLen);
   }
 }
+
+/**
+  * @brief  EXTI line detection callbacks.
+  * @param  GPIO_Pin Specifies the pins connected EXTI line
+  * @retval None
+  */
+void HAL_GPIO_EXTI_Callback(uint16_t GPIO_Pin)
+{
+  if(GPIO_Pin == USER_Btn_Pin)
+  {
+    // Write new period value
+    __HAL_TIM_SET_AUTORELOAD(&htim2, TIM_Period_us - 1);
+
+    // Set global variable #1
+    DEBUG_Flag1 = 1;
+
+    // Set and read digital output #1
+    HAL_GPIO_WritePin(DEBUG_OUT1_GPIO_Port, DEBUG_OUT1_Pin, GPIO_PIN_SET);
+    DEBUG_OUT1_State = HAL_GPIO_ReadPin(DEBUG_OUT1_GPIO_Port, DEBUG_OUT1_Pin);
+
+    // Start delay timer
+    HAL_TIM_Base_Start_IT(&htim2);
+  }
+}
+
 /* USER CODE END 0 */
 
 /**
@@ -114,7 +153,6 @@ void HAL_UART_RxCpltCallback(UART_HandleTypeDef *huart)
   */
 int main(void)
 {
-
   /* USER CODE BEGIN 1 */
 
   /* USER CODE END 1 */
@@ -142,29 +180,15 @@ int main(void)
   MX_TIM2_Init();
   MX_TIM7_Init();
   /* USER CODE BEGIN 2 */
-  HAL_UART_Receive_IT(&huart3, (uint8_t*)msg, LAMP_MSG_LEN);
+  TIM_Period_us = __HAL_TIM_GET_AUTORELOAD(&htim2) + 1;
+  UART_CmdLen = strlen(UART_Cmd);
+  HAL_UART_Receive_IT(&huart3, (uint8_t*)UART_Cmd, UART_CmdLen);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    if(UART_RxComplete)
-    {
-      UART_RxComplete = 0;
-
-      char option = '\0';
-      unsigned int value = 0;
-      sscanf(msg, "%c%u", &option, &value);
-
-      if(option == 'F'  || option == 'f') // Firing angle
-        hlamp1.TriacFiringAngle = (float)value;
-
-      if(option == 'B'  || option == 'b') // Brightness
-        LAMP_SetBrightness(&hlamp1, (float)value);
-
-      HAL_UART_Receive_IT(&huart3, (uint8_t*)msg, LAMP_MSG_LEN);
-    }
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
