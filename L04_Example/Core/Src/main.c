@@ -25,8 +25,7 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
-#include "encoder_config.h"
+
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +46,7 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+unsigned int ENC_Counter = 0;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -95,18 +94,15 @@ int main(void)
   MX_TIM4_Init();
   MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  ENC_Init(&henc1);
+  HAL_TIM_Encoder_Start(&htim3, TIM_CHANNEL_ALL);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    static char UART_Message[64];
-    unsigned int UART_MessageLen = snprintf(UART_Message, sizeof(UART_Message), "{\"encoder\":%3lu}\r", ENC_ReadCounter(&henc1));
-    unsigned int UART_MessageTimeout = 1 + (UART_MessageLen / huart3.Init.BaudRate);
-    HAL_UART_Transmit(&huart3, (uint8_t*)UART_Message, UART_MessageLen, UART_MessageTimeout);
-    HAL_Delay(99);
+    ENC_Counter = __HAL_TIM_GET_COUNTER(&htim3);
+    HAL_Delay(9);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
