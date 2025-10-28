@@ -10,6 +10,7 @@ L07_Example/Debug
 L08_Example/Debug
 L09_Example/Debug
 L10_L11_Example/Debug
+L04_Example/Components/Src/pwm.c
 
 L10_L11_Example/Components/Src/Y3_vec.c
 L10_L11_Example/Components/Src/Y3_REF_vec.c
@@ -61,3 +62,4 @@ L10_L11_Example/Components/Inc/C_REF_mat.h
 L10_L11_Example/Components/Inc/B_mat.h
 L10_L11_Example/Components/Inc/C_mat.h
 L10_L11_Example/Components/Inc/A_mat.h
+L04_Example/Components/Src/pwm.c
