@@ -31,7 +31,7 @@ Zadania laboratoryjne
   - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/88481dfa6e5d1225a6aa83c1be451587b3a4caf4/L04_Example)
   - [Zadanie #4 (ver. 1)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2a87fc6b0c39e9a4b8c1d041768dc042e3e0a47b/L04_Example) / [(ver. 2)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/6e2b315da45fda13fcd9072a154afa6ec132074d/L04_Example)
   - [Zadanie #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/d920c00c17aafb8fed6e2d4771fc95d4cb37457b/L04_Example)
-  - [Zadanie #6](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/8a69718351b516543bb01f6ca5dc41b1ec9d09e8/L04_Example)
+  - [Zadanie #6](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/94d7259956f7bf490c4d5c21064d19cc1fea0e40/L04_Example)
     
 # Examples of embedded applications for NUCLEO-F746ZG board
 
@@ -65,4 +65,4 @@ Project created using the STM32CubeIDE environment, version **1.19.0** and STM32
   - [Task #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/88481dfa6e5d1225a6aa83c1be451587b3a4caf4/L04_Example)
   - [Task #4 (ver. 1)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2a87fc6b0c39e9a4b8c1d041768dc042e3e0a47b/L04_Example) / [(ver. 2)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/6e2b315da45fda13fcd9072a154afa6ec132074d/L04_Example)
   - [Task #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/d920c00c17aafb8fed6e2d4771fc95d4cb37457b/L04_Example)
-  - [Task #6](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/8a69718351b516543bb01f6ca5dc41b1ec9d09e8/L04_Example)
+  - [Task #6](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/94d7259956f7bf490c4d5c21064d19cc1fea0e40/L04_Example)
