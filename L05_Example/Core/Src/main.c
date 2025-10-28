@@ -19,14 +19,12 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "i2c.h"
-#include "tim.h"
 #include "usart.h"
 #include "gpio.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-#include <stdio.h>
-#include "encoder_config.h"
+#include "bh1750_config.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -47,7 +45,9 @@
 /* Private variables ---------------------------------------------------------*/
 
 /* USER CODE BEGIN PV */
-
+float Illuminance_lux = 0.0f;
+unsigned int  Illuminance_mlux = 0;
+unsigned int Delay_ms = 200;
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -92,21 +92,17 @@ int main(void)
   MX_GPIO_Init();
   MX_I2C1_Init();
   MX_USART3_UART_Init();
-  MX_TIM4_Init();
-  MX_TIM3_Init();
   /* USER CODE BEGIN 2 */
-  ENC_Init(&henc1);
+  BH1750_Init(&hbh1750);
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    static char UART_Message[64];
-    unsigned int UART_MessageLen = snprintf(UART_Message, sizeof(UART_Message), "{\"encoder\":%3lu}\r", ENC_ReadCounter(&henc1));
-    unsigned int UART_MessageTimeout = 1 + (UART_MessageLen / huart3.Init.BaudRate);
-    HAL_UART_Transmit(&huart3, (uint8_t*)UART_Message, UART_MessageLen, UART_MessageTimeout);
-    HAL_Delay(99);
+	Illuminance_lux = BH1750_ReadIlluminance_lux(&hbh1750);
+	Illuminance_mlux = 1000 * Illuminance_lux;
+	HAL_Delay(Delay_ms - 1);
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
