@@ -58,7 +58,26 @@ void SystemClock_Config(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+/**
+ * @brief  Low-level implementation of the _write system call.
+ *
+ * This function redirects standard output (e.g., printf) to UART3.
+ * It transmits data from the provided buffer over the UART interface.
+ *
+ * @param[in]  file File descriptor (ignored in this implementation).
+ * @param[in]  ptr  Pointer to the data buffer to be transmitted.
+ * @param[in]  len  Number of bytes to transmit.
+ *
+ * @retval Number of bytes transmitted on success.
+ * @retval -1 on transmission error.
+ *
+ * @note This function is typically used when retargeting printf() to UART.
+ *       It blocks until all bytes are sent (uses HAL_MAX_DELAY).
+ */
+int _write(int file, char *ptr, int len)
+{
+  return (HAL_UART_Transmit(&huart3, (uint8_t*)ptr, len, HAL_MAX_DELAY) == HAL_OK) ? len : -1;
+}
 /* USER CODE END 0 */
 
 /**
@@ -69,7 +88,7 @@ int main(void)
 {
 
   /* USER CODE BEGIN 1 */
-
+  setvbuf(stdout, NULL, _IONBF, 0);
   /* USER CODE END 1 */
 
   /* MCU Configuration--------------------------------------------------------*/
@@ -102,10 +121,7 @@ int main(void)
   /* USER CODE BEGIN WHILE */
   while (1)
   {
-    static char UART_Message[64];
-    unsigned int UART_MessageLen = snprintf(UART_Message, sizeof(UART_Message), "{\"encoder\":%3lu}\r", ENC_ReadCounter(&henc1));
-    unsigned int UART_MessageTimeout = 1 + (10000*UART_MessageLen / huart3.Init.BaudRate);
-    HAL_UART_Transmit(&huart3, (uint8_t*)UART_Message, UART_MessageLen, UART_MessageTimeout);
+    printf("{\"encoder\":%3lu}\r", ENC_ReadCounter(&henc1));
     HAL_Delay(99);
     /* USER CODE END WHILE */
 
