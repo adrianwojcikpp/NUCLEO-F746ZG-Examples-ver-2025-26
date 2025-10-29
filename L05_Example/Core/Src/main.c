@@ -148,7 +148,7 @@ int main(void)
   {
     Illuminance_lux = BH1750_ReadIlluminance_lux(&hbh1750);
     Illuminance_mlux = 1000 * Illuminance_lux;
-    printf("{\"illuminance\":%5u.%3d}\r", Illuminance_mlux / 1000, Illuminance_mlux % 1000);
+    printf("{\"illuminance\":%5u.%03d}\r", Illuminance_mlux / 1000, Illuminance_mlux % 1000);
     HAL_Delay(Delay_ms - 1);
     /* USER CODE END WHILE */
 
