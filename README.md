@@ -37,7 +37,38 @@ Zadania laboratoryjne
   - [Zadanie #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/cd0de82024a9960f20bbf399a867741ebc6bab90/L05_Example)
   - [Zadanie #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/5cc9c24046a896a19bcebaa728200ec797794cf5/L05_Example)
   - [Zadanie #6](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/22cd9172fb30337c0704bb79260abc61d99817a3/L05_Example)
-    
+- L06: SPI
+  - [Zadanie #2 i #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/6c20992d6dd9f0150681b4417973a1b41b03a3c5/L06_Example)
+  - [Zadanie #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/badcbcf7343bcb8630bcae5cb9bee5f392d57841/L06_Example)
+  - [Zadanie #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/633daa310134c674dabc4b7f5ebb75c595de33c1/L06_Example)
+  - [Zadanie #6](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/9d1079b214555bd4fd1ee99848b01faff19305fd/L06_Example)
+- L07: ADC (TODO)
+  - Zadanie #1
+  - Zadanie #2
+  - Zadanie #3
+  - Zadanie #4 (ver. A) / (ver. B) / (ver. C)
+  - Zadanie #5
+- L08: DAC (TODO)
+  - Zadanie #1
+  - Zadanie #2
+  - Zadanie #3
+  - Zadanie #4
+  - Zadanie #5
+- L09: Układ sterowania (TODO)
+  - Zadanie zaliczeniowe
+- L10: DSP cz. 1 (TODO)
+  - Zadanie #1
+  - Zadanie #2
+  - Zadanie #3
+- L11: DSP cz. 2 (TODO)
+  - Zadanie #1
+  - Zadanie #2
+  - Zadanie #3
+- L12: LCD (TODO)
+  - Zadanie dodatkowe #1
+- L13: C# (TODO)
+  - Zadanie dodatkowe #2  
+ 
 # Examples of embedded applications for NUCLEO-F746ZG board
 
 Examples of embedded applications for the NUCLEO development kit with the STM32F746ZG microcontroller based on *Microprocessor systems* laboratory classes on Automatic Control and Robotics at the Poznań University of Technology.
@@ -76,3 +107,34 @@ Project created using the STM32CubeIDE environment, version **1.19.0** and STM32
   - [Task #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/cd0de82024a9960f20bbf399a867741ebc6bab90/L05_Example)
   - [Task #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/5cc9c24046a896a19bcebaa728200ec797794cf5/L05_Example)
   - [Task #6](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/22cd9172fb30337c0704bb79260abc61d99817a3/L05_Example)
+- L06: SPI
+  - [Tasks #2 i #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/6c20992d6dd9f0150681b4417973a1b41b03a3c5/L06_Example)
+  - [Task #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/badcbcf7343bcb8630bcae5cb9bee5f392d57841/L06_Example)
+  - [Task #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/633daa310134c674dabc4b7f5ebb75c595de33c1/L06_Example)
+  - [Task #6](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/9d1079b214555bd4fd1ee99848b01faff19305fd/L06_Example)
+- L07: ADC (TODO)
+  - Task #1
+  - Task #2
+  - Task #3
+  - Task #4 (ver. A) / (ver. B) / (ver. C)
+  - Task #5
+- L08: DAC (TODO)
+  - Task #1
+  - Task #2
+  - Task #3
+  - Task #4
+  - Task #5
+- L09: Control system (TODO)
+  - Final task
+- L10: DSP pt. 1 (TODO)
+  - Task #1
+  - Task #2
+  - Task #3
+- L11: DSP pt. 2 (TODO)
+  - Task #1
+  - Task #2
+  - Task #3
+- L12: Task (TODO)
+  - Extra credit task #1
+- L13: C# (TODO)
+  - Extra credit task #2  
