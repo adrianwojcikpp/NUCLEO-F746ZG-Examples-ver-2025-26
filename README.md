@@ -9,7 +9,7 @@ Zadania laboratoryjne
   - [Zadanie #1: Szablon projektu](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/462886fada69df4fbc8d2661fbe2b203d966a958/L00_Example)
   - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/59cae65e72af171dce676ab8bef43f9ab99643d7/L00_Example)
 - L01: GPIO / NVIC
-  - [Zadanie #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/df037214486f5385f5d25bf9b436dc737f74c958/L02_Example) 
+  - [Zadanie #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/c9d180895f43fb4788aa38d7c605e8e43994af62/L01_Example) 
   - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/7c2437f82ca7018f801367fa5e8a02e482cfb126/L01_Example)
   - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/ed1a6a03511bba850077f9911eb5dfde0e9a72bb/L01_Example)
   - [Zadanie #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/ff5b1e759b604fb26844ec616a9161b984d82458/L01_Example)
