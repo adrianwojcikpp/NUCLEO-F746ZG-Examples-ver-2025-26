@@ -59,6 +59,7 @@ void MX_USART3_UART_Init(void)
 }
 
 void HAL_UART_MspInit(UART_HandleTypeDef* uartHandle)
+
 {
 
   GPIO_InitTypeDef GPIO_InitStruct = {0};
