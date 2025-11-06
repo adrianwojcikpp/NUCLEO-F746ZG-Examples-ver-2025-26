@@ -48,12 +48,12 @@ Zadania laboratoryjne
   - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/775e35123ca6184395b886532e9fb0b62a4faa85/L07_Example)
   - [Zadanie #4 (ver. A)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a567b3f882d5c96d0b9640a28fc5e86e9be2bfbe/L07_Example) / [(ver. B)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/9881620c2b3aca4c7bf0b3882412504d666d66dc/L07_Example) / [(ver. C)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2ad7cc995ae215986bd0a792bcc45090ce5cdb38/L07_Example)
   - [Zadanie #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/1a998e4ab2777a68b0effd2f0cfd2e1bbc2d67c2/L07_Example)
-- L08: DAC (TODO)
-  - Zadanie #1
-  - Zadanie #2
-  - Zadanie #3
-  - Zadanie #4
-  - Zadanie #5
+- L08: DAC      
+  - [Zadanie #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/63884e0af6dd62e81a53ee9c4ac1cda9b503fe70/L08_Example)
+  - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/fee0a4e817d56c05f3d55875594c452cb5be4d2f/L08_Example)
+  - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/5d722ce2e344a6548afe3d5644db16565a8d32fb/L08_Example)
+  - [Zadanie #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/903c0f2e3ae50926e93e2e2cdd4521fc7fa71e28/L08_Example)
+  - [Zadanie #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/baac2f35f723391df41a56792e2fac0694f7116a/L08_Example)
 - L09: Układ sterowania (TODO)
   - Zadanie zaliczeniowe
 - L10: DSP cz. 1 (TODO)
@@ -116,14 +116,14 @@ Project created using the STM32CubeIDE environment, version **1.19.0** and STM32
   - [Task #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/d7b215ae43c94a1f808d0abc57ed2794182debf4/L07_Example)
   - [Task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/1031ab1fb2a364b4a96dfa144e1994025e734866/L07_Example)
   - [Task #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/775e35123ca6184395b886532e9fb0b62a4faa85/L07_Example)
-  - [ #4 (ver. A)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a567b3f882d5c96d0b9640a28fc5e86e9be2bfbe/L07_Example) / [(ver. B)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/9881620c2b3aca4c7bf0b3882412504d666d66dc/L07_Example) / [(ver. C)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2ad7cc995ae215986bd0a792bcc45090ce5cdb38/L07_Example)
+  - [Task #4 (ver. A)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a567b3f882d5c96d0b9640a28fc5e86e9be2bfbe/L07_Example) / [(ver. B)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/9881620c2b3aca4c7bf0b3882412504d666d66dc/L07_Example) / [(ver. C)](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2ad7cc995ae215986bd0a792bcc45090ce5cdb38/L07_Example)
   - [Task #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/1a998e4ab2777a68b0effd2f0cfd2e1bbc2d67c2/L07_Example)
-- L08: DAC (TODO)
-  - Task #1
-  - Task #2
-  - Task #3
-  - Task #4
-  - Task #5
+- L08: DAC
+  - [Task #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/63884e0af6dd62e81a53ee9c4ac1cda9b503fe70/L08_Example)
+  - [Task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/fee0a4e817d56c05f3d55875594c452cb5be4d2f/L08_Example)
+  - [Task #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/5d722ce2e344a6548afe3d5644db16565a8d32fb/L08_Example)
+  - [Task #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/903c0f2e3ae50926e93e2e2cdd4521fc7fa71e28/L08_Example)
+  - [Task #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/baac2f35f723391df41a56792e2fac0694f7116a/L08_Example)
 - L09: Control system (TODO)
   - Final task
 - L10: DSP pt. 1 (TODO)
