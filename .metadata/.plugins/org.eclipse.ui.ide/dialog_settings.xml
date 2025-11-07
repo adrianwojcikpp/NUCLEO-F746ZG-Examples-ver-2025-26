@@ -9,6 +9,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\AW\STM32Cube\STM32CubeIDE\workspace_1.19.0\NUCLEO-F746ZG-Examples-ver-2025-26\L10_L11_Example"/>
 			<item value="C:\Users\AW\STM32Cube\STM32CubeIDE\workspace_1.19.0\NUCLEO-F746ZG-Examples-ver-2025-26\L00_Example"/>
 			<item value="C:\Users\AW\STM32Cube\STM32CubeIDE\workspace_1.19.0\NUCLEO-F746ZG-Examples-ver-2025-26"/>
 		</list>
