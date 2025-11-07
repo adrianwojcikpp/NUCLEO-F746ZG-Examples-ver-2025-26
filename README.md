@@ -60,10 +60,10 @@ Zadania laboratoryjne
   - [Zadanie #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a0dc0872adac605b7f5dbeedb6906a3e96b1486e/L10_L11_Example)
   - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2fe9677d55ec98de486c9900a11118130ae5e861/L10_L11_Example)
   - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/f5b15e50070f334ebad039d85a928b9535118b80/L10_L11_Example)
-- L11: DSP cz. 2 (TODO)
-  - Zadanie #1
-  - Zadanie #2
-  - Zadanie #3
+- L11: DSP cz. 2
+  - [Zadanie #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/c1f9c5114721bed69c02d8d2a209339bf0e5a5e7/L10_L11_Example)
+  - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/27ae726eb7ff71deaf26f8d0e2c8a80a40eefec9/L10_L11_Example)
+  - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/9771d001451aaffc65b51f629bdb55f6183faf47/L10_L11_Example)
 - L12: LCD (TODO)
   - Zadanie dodatkowe #1
 - L13: C# (TODO)
@@ -130,10 +130,10 @@ Project created using the STM32CubeIDE environment, version **1.19.0** and STM32
   - [Task #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a0dc0872adac605b7f5dbeedb6906a3e96b1486e/L10_L11_Example)
   - [Task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2fe9677d55ec98de486c9900a11118130ae5e861/L10_L11_Example)
   - [Task #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/f5b15e50070f334ebad039d85a928b9535118b80/L10_L11_Example)
-- L11: DSP pt. 2 (TODO)
-  - Task #1
-  - Task #2
-  - Task #3
+- L11: DSP pt. 2
+  - [Task #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/c1f9c5114721bed69c02d8d2a209339bf0e5a5e7/L10_L11_Example)
+  - [Task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/27ae726eb7ff71deaf26f8d0e2c8a80a40eefec9/L10_L11_Example)
+  - [Task #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/9771d001451aaffc65b51f629bdb55f6183faf47/L10_L11_Example)
 - L12: Task (TODO)
   - Extra credit task #1
 - L13: C# (TODO)
