@@ -56,10 +56,10 @@ Zadania laboratoryjne
   - [Zadanie #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/baac2f35f723391df41a56792e2fac0694f7116a/L08_Example)
 - L09: Układ sterowania (TODO)
   - Zadanie zaliczeniowe
-- L10: DSP cz. 1 (TODO)
-  - Zadanie #1
-  - Zadanie #2
-  - Zadanie #3
+- L10: DSP cz. 1
+  - [Zadanie #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a0dc0872adac605b7f5dbeedb6906a3e96b1486e/L10_L11_Example)
+  - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2fe9677d55ec98de486c9900a11118130ae5e861/L10_L11_Example)
+  - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/f5b15e50070f334ebad039d85a928b9535118b80/L10_L11_Example)
 - L11: DSP cz. 2 (TODO)
   - Zadanie #1
   - Zadanie #2
@@ -126,10 +126,10 @@ Project created using the STM32CubeIDE environment, version **1.19.0** and STM32
   - [Task #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/baac2f35f723391df41a56792e2fac0694f7116a/L08_Example)
 - L09: Control system (TODO)
   - Final task
-- L10: DSP pt. 1 (TODO)
-  - Task #1
-  - Task #2
-  - Task #3
+- L10: DSP pt. 1
+  - [Task #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a0dc0872adac605b7f5dbeedb6906a3e96b1486e/L10_L11_Example)
+  - [Task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2fe9677d55ec98de486c9900a11118130ae5e861/L10_L11_Example)
+  - [Task #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/f5b15e50070f334ebad039d85a928b9535118b80/L10_L11_Example)
 - L11: DSP pt. 2 (TODO)
   - Task #1
   - Task #2
