@@ -54,8 +54,8 @@ Zadania laboratoryjne
   - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/5d722ce2e344a6548afe3d5644db16565a8d32fb/L08_Example)
   - [Zadanie #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/903c0f2e3ae50926e93e2e2cdd4521fc7fa71e28/L08_Example)
   - [Zadanie #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/baac2f35f723391df41a56792e2fac0694f7116a/L08_Example)
-- L09: Układ sterowania (TODO)
-  - Zadanie zaliczeniowe
+- L09: Układ sterowania
+  - [Zadanie zaliczeniowe](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/85d7c0a51b0ebdfc726cfe80190917e807111ad4/L09_Example)
 - L10: DSP cz. 1
   - [Zadanie #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a0dc0872adac605b7f5dbeedb6906a3e96b1486e/L10_L11_Example)
   - [Zadanie #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2fe9677d55ec98de486c9900a11118130ae5e861/L10_L11_Example)
@@ -124,8 +124,8 @@ Project created using the STM32CubeIDE environment, version **1.19.0** and STM32
   - [Task #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/5d722ce2e344a6548afe3d5644db16565a8d32fb/L08_Example)
   - [Task #4](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/903c0f2e3ae50926e93e2e2cdd4521fc7fa71e28/L08_Example)
   - [Task #5](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/baac2f35f723391df41a56792e2fac0694f7116a/L08_Example)
-- L09: Control system (TODO)
-  - Final task
+- L09: Control system
+  - [Final task](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/85d7c0a51b0ebdfc726cfe80190917e807111ad4/L09_Example)
 - L10: DSP pt. 1
   - [Task #1](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/a0dc0872adac605b7f5dbeedb6906a3e96b1486e/L10_L11_Example)
   - [Task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/2fe9677d55ec98de486c9900a11118130ae5e861/L10_L11_Example)
