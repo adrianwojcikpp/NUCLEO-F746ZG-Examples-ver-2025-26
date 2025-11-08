@@ -1,0 +1,12 @@
+../Components/Src/lcd.c:45:6:__lcd_dio_delay_us	2
+../Components/Src/lcd.c:61:6:__lcd_dio_write	2
+../Components/Src/lcd.c:78:6:__lcd_dio_write_command	3
+../Components/Src/lcd.c:102:6:__lcd_dio_write_data	2
+../Components/Src/lcd.c:125:6:LCD_DIO_Init	3
+../Components/Src/lcd.c:169:6:LCD_DIO_printDecInt	1
+../Components/Src/lcd.c:183:6:LCD_DIO_printHexInt	1
+../Components/Src/lcd.c:197:6:LCD_DIO_printStr	2
+../Components/Src/lcd.c:210:6:LCD_DIO_SetCursor	1
+../Components/Src/lcd.c:226:6:LCD_DIO_Clear	1
+../Components/Src/lcd.c:237:6:LCD_DIO_DefineChar	2
+../Components/Src/lcd.c:252:6:LCD_DIO_printf	1

@@ -1,0 +1,7 @@
+../Components/Src/bmp280.c:47:8:BMP2_Init	32	static
+../Components/Src/bmp280.c:91:20:bmp2_spi_read	32	static
+../Components/Src/bmp280.c:129:20:bmp2_spi_write	32	static
+../Components/Src/bmp280.c:162:6:bmp2_delay_us	16	static
+../Components/Src/bmp280.c:180:8:BMP2_ReadData	56	static
+../Components/Src/bmp280.c:211:8:BMP2_ReadTemperature_degC	64	static
+../Components/Src/bmp280.c:241:8:BMP2_ReadPressure_hPa	64	static
