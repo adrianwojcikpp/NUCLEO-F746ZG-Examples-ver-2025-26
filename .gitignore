@@ -13,6 +13,9 @@ L10_L11_Example/Debug
 L12_Example/Debug
 L13_Example/STM32CubeIDE/Debug
 L13_Example/SerialPortApp/bin
+L13_Example/SerialPortApp/obj
 L04_Example/Components/Src/pwm.c
 L05_Example/Components/Src/pwm.c
 L06_Example/Components/Src/pwm.c
+L13_Example/SerialPortApp/MainForm.cs
+L13_Example/SerialPortApp/MainForm.designer.cs
