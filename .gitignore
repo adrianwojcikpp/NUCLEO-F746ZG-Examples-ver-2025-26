@@ -10,6 +10,9 @@ L07_Example/Debug
 L08_Example/Debug
 L09_Example/Debug
 L10_L11_Example/Debug
+L12_Example/Debug
+L13_Example/STM32CubeIDE/Debug
+L13_Example/SerialPortApp/bin
 L04_Example/Components/Src/pwm.c
 L05_Example/Components/Src/pwm.c
 L06_Example/Components/Src/pwm.c
