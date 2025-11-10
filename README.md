@@ -66,8 +66,8 @@ Zadania laboratoryjne
   - [Zadanie #3](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/9771d001451aaffc65b51f629bdb55f6183faf47/L10_L11_Example)
 - L12: LCD (TODO)
   - Zadanie dodatkowe #1
-- L13: C# (TODO)
-  - Zadanie dodatkowe #2  
+- L13: C#
+  - [Zadanie dodatkowe #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/234a75ac8daaab8ad88a7cb5f4ee83fda7feb927/L13_Example)  
  
 # Examples of embedded applications for NUCLEO-F746ZG board
 
@@ -137,4 +137,4 @@ Project created using the STM32CubeIDE environment, version **1.19.0** and STM32
 - L12: Task (TODO)
   - Extra credit task #1
 - L13: C# (TODO)
-  - Extra credit task #2  
+  - [Extra credit task #2](https://github.com/adrianwojcikpp/NUCLEO-F746ZG-Examples-ver-2025-26/tree/234a75ac8daaab8ad88a7cb5f4ee83fda7feb927/L13_Example)
